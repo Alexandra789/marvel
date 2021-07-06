@@ -140,29 +140,13 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .menu-container {
-    margin: 0 100px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .hamburger-menu {
-    display: block;
-  }
-
-  .menu-container {
-    margin: 0 40px !important;
-  }
-}
-
 @media (max-width: 540px) {
   .hamburger-menu {
     display: block;
   }
 
   .menu-container {
-    padding: 0 25px !important;
+    padding: 0 25px;
   }
 
   #menu-left {

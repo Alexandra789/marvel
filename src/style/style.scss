@@ -359,10 +359,6 @@ body {
         font-weight: 300;
         font-size: 18px;
 
-        //&:first-child {
-        //    margin-top: -8px;
-        //}
-
         &:last-child {
             margin: 0px;
         }
@@ -501,7 +497,7 @@ body {
         &__wrapper {
             margin-left: 100px;
             @media (max-width: 767px) {
-                margin-left: 0px !important;
+                margin-left: 0px;
             }
         }
 
