@@ -6,29 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./src/style/style.css">
-    <link rel="stylesheet" type="text/css" href="./src/style/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="./src/style/owl.theme.default.min.css">
-    <link rel="stylesheet" type="text/css" href="./src/style/hamburger.css">
-    <link rel="preconnect" type="text/css" href="https://fonts.googleapis.com">
-    <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet">
     <link type="text/css" href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./src/style/style.css">
     <title>Marvel</title>
 </head>
 
 <body>
     <div class="stripes d-xl-block d-none"></div>
-    <header class="navigation">
-            <div class="wrapper">
+    <header class="header">
+        <div class="header__wrapper">
                 <div class="row mrg">
-                    <div class="col-xl-7 col-md-5 col-sm-4">
-                        <img src="./assets/images/logo.svg" alt="logo">
+                    <div class="col-xl-5 col-md-4 col-sm-4">
+                        <img class="logo header__logo" src="./assets/images/logo.svg" alt="logo">
                     </div>
-                    <div class="col-xl-5 col-md-7 col-sm-8">
-                        <nav class="menu d-none d-lg-block d-md-block">
-                            <a href="#about">About</a>
-                            <a href="#services">Services</a>
-                            <a href="#contact">Contact</a>
+                    <div class="col-xl-7 col-md-8 col-sm-8">
+                        <nav class="menu header__menu d-none d-lg-block d-md-block">
+                            <a class="item menu__item" href="#about">About</a>
+                            <a class="item menu__item" href="#services">Services</a>
+                            <a class="item menu__item" href="#contact">Contact</a>
                         </nav>
                     </div>
                     <div class="hamburger-menu d-block d-lg-none d-md-none">
@@ -50,29 +46,28 @@
                             </div>
                         </div>
                     </div>
-            </div>
-        </div>
+                </div>
         <div class="slider-activities">
             <div id="carouselWithOneItem" class="carousel owl-carousel owl-theme">
-                <div class="item">
-                    <div class="container full">
+                <div class="slider-activities__item">
+                    <div class="container slider-activities__item__container">
                         <div class="wrapper-information">
                             <div class="text-wrapper">
-                                    <p class="title slider__title">Marvel Power Group</p>
-                                    <p class="text slider__subtitle">Marvel Power Group is a boutique
+                                    <p class="title slider-activities__item__title">Marvel Power Group</p>
+                                    <p class="text slider-activities__item__subtitle">Marvel Power Group is a boutique
                                         consulting firm with a fresh, markets-based approach to value
                                         creation. We offer services to clients in energy, water, manufacturing
                                         and transportation sectors.
                                     </p>
-                                <button class="button slider__button last">Contact us <img class="bg-img" src="./assets/images/button-svg.svg"></button>
-                                <p class="show-more d-xl-block d-none">Scroll for more</p>
+                                <button class="button slider-activities__item__button last">Contact us <img class="bg-img" src="./assets/images/button-svg.svg"></button>
+                                <p class="slider-activities__item__text d-xl-block d-none">Scroll for more</p>
                                 <div class="stripes-special home d-xl-block d-none"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
         <div class="section-number home dark">
             <div class="section-number__entry">
                 <div class="section-number__entry__number">01</div>
@@ -95,12 +90,13 @@
     </header>
 
     <section class="about-us" id="about">
-        <div class="container">
-                    <p class="title about-us__title">About Us</p>
-                    <div class="stripe"></div>
+    <div class="about-us__wrapper wrapper">
+        <div class="container about-us__container">
+            <p class="title about-us__title">About Us</p>
+            <div class="stripe about-us__stripe"></div>
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6">
-                    <img src="./assets/images/about-us-section.png" alt="img">
+                    <img class="img about-us__img"src="./assets/images/about-us-section.png" alt="img">
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6">
                     <p class="text about-us__text">
@@ -115,7 +111,6 @@
                     <p class="text about-us__text last">
                         We specialize in structuring balanced solutions for all affected
                         stakeholders and uncovering economic opportunities in otherwise opaque environments.
-                    </p>
                     </p>
                 </div>
                 <div class="section-number">
@@ -139,14 +134,16 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <div class="stripes-short d-xl-block d-none"></div>
 
     <section class="services" id="services">
-        <div class="container">
+    <div class="services__wrapper wrapper">
+        <div class="container services__container">
                     <p class="title services__title">Services</p>
-                    <div class="stripe"></div>
+                    <div class="stripe services__stripe"></div>
             <div class="row">
                 <div class="col-xl-10 col-md-10">
                     <p class="text services__text">
@@ -162,14 +159,14 @@
             <div class="row">
                 <div class="col-xl-4 col-md-6">
                     <p class="col-title first">Enterprise Strategy</p>
-                    <div class="wrapper">
-                        <ul class="" type="square">
-                            <li class="text">Procurement and investment diligence</li>
-                            <li class="text">Customer engagement and retention</li>
-                            <li class="text">Renewable, DER, and EV program structuring</li>
-                            <li class="text">Reliability planning and reporting</li>
+                    <div class="services__list list">
+                        <ul class="services__list__wrapper" type="square">
+                            <li class="text services__list__item">Procurement and investment diligence</li>
+                            <li class="text services__list__item">Customer engagement and retention</li>
+                            <li class="text services__list__item">Renewable, DER, and EV program structuring</li>
+                            <li class="text services__list__item">Reliability planning and reporting</li>
                         </ul>
-                        <img src="./assets/images/arrow.svg" alt="arrow" class="arrow">
+                        <img class="services__list__arrow-img arrow-img"src="./assets/images/arrow.svg" alt="arrow" >
                     </div>
                 </div>
                 <div class="section-number">
@@ -193,73 +190,75 @@
                 </div>
                 <div class="col-xl-4 col-md-6">
                     <p class="col-title">Wholesale Power </p>
-                    <div class="wrapper">
-                        <ul class="" type="square">
-                            <li class="text">Commodity advisory and RFPs</li>
-                            <li class="text">Energy, capacity, REC, RIN, and LCFS placement</li>
-                            <li class="text">Enterprise PPA structuring</li>
-                            <li class="text">Contract extensions and re-packaging</li>
+                    <div class="services__list list">
+                        <ul class="list services__list__wrapper" type="square">
+                            <li class="text services__list__item">Commodity advisory and RFPs</li>
+                            <li class="text services__list__item">Energy, capacity, REC, RIN, and LCFS placement</li>
+                            <li class="text services__list__item">Enterprise PPA structuring</li>
+                            <li class="text services__list__item">Contract extensions and re-packaging</li>
                         </ul>
-                        <img src="./assets/images/arrow.svg" alt="arrow" class="arrow">
+                        <img src="./assets/images/arrow.svg" alt="arrow" class="services__list__arrow-img arrow-img">
                     </div>
                 </div>
                 <div class="col-xl-4">
                     <p class="col-title">Market Development</p>
-                    <div class="wrapper">
-                        <ul class="" type="square">
-                            <li class="text">New venture setup</li>
-                            <li class="text">Demand planning and acquisition</li>
-                            <li class="text">Project development and regulatory support</li>
-                            <li class="text">Partnership structuring</li>
+                    <div class="services__list list">
+                        <ul class="list services__list__wrapper" type="square">
+                            <li class="text services__list__item">New venture setup</li>
+                            <li class="text services__list__item">Demand planning and acquisition</li>
+                            <li class="text services__list__item">Project development and regulatory support</li>
+                            <li class="text services__list__item">Partnership structuring</li>
                         </ul>
-                        <img src="./assets/images/arrow.svg" alt="arrow" class="arrow">
+                        <img src="./assets/images/arrow.svg" alt="arrow" class="services__list__arrow-img arrow-img">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-10 col-md-10">
-                    <p class="text services__text mg last">
-                        Our clients are at the forefront of energy
-                        transition and innovation. Their task is complex:
-                        balance reliability and cost effectiveness with new
-                        customer demands, investment decisions, decarbonization
-                        goals and an evolving menu of new technologies. We understand
-                        the task and bring deep expertise to addressing these challenges.
+                    <p class="text services__text services__text-bottom last">
+                       Our clients are time constrained and under-resourced.
+                       Agendas shift, budgets move and priorities change.
+                       We understand. We are agile, creative and immediately
+                       responsive to your various working styles, governance
+                       requirements and evolving needs.
                     </p>
                 </div>
-                </div>
             </div>
+        </div>
         </div>
     </section>
 
     <div class="stripes-short d-xl-block d-none"></div>
 
     <section class="contact" id="contact">
-        <div class="container">
-            <div class="row mrg">
+    <div class="contact__wrapper wrapper">
+        <div class="container contact__container">
+            <div class="row ml-0">
                 <div class="col-xl-7 col-md-6 pd">
                     <p class="title contact__title">Contact</p>
-                    <div class="stripe"></div>
+                    <div class="stripe contact__stripe"></div>
                     <p class="contact__text">Email us here: <span>info@marvelpowergroup.com</span></p>
                 </div>
                 <div class="col-xl-5 col-md-6 pd">
-                    <div class="contact-form-wrapper">
-                        <div class="contact-form-init">
-                            <p class="form__title">
+                    <div class="contact-form">
+                    <div class="contact-form__wrapper">
+                        <div class="contact-form__init">
+                            <p class="contact-form__title">
                                 Stay in the loop
                                 by getting on
                                 our mailing list
                             </p>
                             <form id="contactForm" action="" class="from">
                                 <div>
-                                    <input type="text" placeholder="name *">
-                                    <input type="text" placeholder="e-mail *">
+                                    <input class="form__input" type="text" placeholder="name *">
+                                    <input class="form__input" type="text" placeholder="e-mail *">
                                 </div>
                                 <button class="button form__button last">send <img class="bg-img" src="./assets/images/button-svg.svg"></img></button>
                             </form>
                         </div>
-                        <div class="contact-form-success">
-                            <p class="form__title">
+                        </div>
+                        <div class="contact-form contact-form__success">
+                            <p class="contact-form__title">
                                 Thank you. Your info has been successfully sent.
                             </p>
                             <p>You can contact us <span>info@marvelpowergroup.com</span> if you need additional
@@ -289,9 +288,11 @@
                     </div>
                 </div>
             </div>
-            <div class="stripes-special d-xl-block d-none"></div>
+
         </div>
+    </div><div class="stripes-special d-xl-block d-none"></div>
     </section>
+
     <script src="./src/app/jquery.min.js"></script>
     <script src="./src/app/owl.carousel.min.js"></script>
     <script src="./src/app/index.js"></script>

@@ -1,129 +1,21 @@
-@import '../../assets/fonts/fonts.css';
+@import "hamburger.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
 
-@media (max-width: 1200px) {
-    .container {
-        max-width: 970px;
-    }
+$stripeStep: 1110px;
+$stripeColorWhite: white;
+$stripeColorBlack: black;
+$stripeColorGray: rgba(150, 150, 150, 0.15);
+$stripeColorYellow: #f6d330;
+$colorYellow: #f6d330;
 
-    .navigation .wrapper {
-        max-width: 970px;
+@mixin padding(){
+    padding-bottom: 140px;
+    padding-top: 110px;
+    @media (max-width: 1200px) {
+        padding-bottom: 80px;
+        padding-top: 50px;
     }
-
-    .section-number {
-        display: none;
-    }
-
-    .about-us {
-        img {
-            margin-bottom: 60px !important;
-            width: 100% !important;
-        }
-    }
-}
-
-@media (max-width: 992px) {
-    .container {
-        max-width: 750px;
-    }
-
-    .navigation .wrapper {
-        max-width: 750px;
-    }
-
-    .slider__subtitle {
-        padding: 0px 15px 0px 0px !important;
-
-    }
-
-    .slider__title {
-        margin-right: 15px;
-        font-size: 50px !important;
-    }
-    .form__button {
-        width: 100% !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .container {
-        max-width: none;
-    }
-    .navigation .wrapper {
-        max-width: 100%;
-    }
-    .title {
-        font-size: 40px !important;
-
-        &:not(.about-us__title) {
-            padding-top: 50px !important;
-        }
-    }
-    .slider__title {
-        font-size: 50px !important;
-    }
-
-    .text {
-        font-size: 14px !important;
-    }
-    .contact-form-wrapper {
-        margin-left: 0px !important;
-    }
-}
-
-@media (max-width: 575px) {
-    .contact__text {
-        margin-top: 25px !important;
-        font-size: 25px !important;
-    }
-    .form__title {
-        margin-top: 45px !important;
-        font-size: 25px !important;
-        max-width: 175px !important;
-        margin-bottom: 25px !important;
-    }
-    .form__button {
-        width: 196px !important;
-        height: 48px !important;
-    }
-    .about-us {
-        height: 740px;
-    }
-
-    .col-title {
-        margin-top: -80px !important;
-
-        &.first {
-            margin-top: -10px !important;
-        }
-
-    }
-    .about-us__title {
-        margin-top: -125px !important;
-    }
-    .contact .stripe {
-        margin-bottom: 0px !important;
-    }
-
-    .services__text {
-        margin-top: -30px !important;
-
-        &#last {
-            margin-top: -80px !important;
-        }
-    }
-
-    .last {
-        margin-bottom: 60px !important;
-    }
-
-    .wrapper-information{
-        height: 850px !important;
-    }
-}
-
-.full{
-    padding: 0px;
-    max-width: 100% !important;
 }
 
 .pd{
@@ -144,19 +36,12 @@ img.bg-img{
     text-transform: uppercase;
     border: none;
     outline: none;
-    font-family: "Sofia Pro Semi Bold";
+    font-family: "Sofia Pro";
+    font-weight: 500;
     &:focus {
         border: none;
         outline: none;
     }
-}
-
-.show-more{
-    margin-top: 177px;
-    margin-bottom: -306px;
-    font-family: "Sofia Pro Light";
-    font-size: 14px;
-    color: rgba(255,255,255, 0.7);
 }
 
 .container {
@@ -171,21 +56,26 @@ body {
     font-size: 90px;
     font-family: 'Alata', sans-serif;
     font-weight: 400;
+    margin-bottom: 0px;
+    @media (max-width: 767px) {
+        font-size: 40px;
+    }
 }
 
 .stripe {
-    margin-top: 10px;
-    margin-bottom: 55px;
+    margin-top: 55px;
+    margin-bottom: 75px;
     width: 6px;
     margin-left: 46px;
     height: 100px;
     transform: rotate(-90deg);
+    @media (max-width: 992px) {
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
 }
 
 .stripes {
-    $stripeStep: 1110px;
-    $stripeColor: rgba(150, 150, 150, 0.15);
-
     position: fixed;
     top: 0;
     width: $stripeStep + 10px;
@@ -196,17 +86,14 @@ body {
     pointer-events: none;
     background: repeating-linear-gradient(
                     90deg,
-                    $stripeColor,
-                    $stripeColor 2px,
+                    $stripeColorGray,
+                    $stripeColorGray 2px,
                     transparent 2px,
                     transparent (($stripeStep / 4) + 2px)
     );
 }
 
 .stripes-short {
-    $stripeStep: 1110px;
-    $stripeColor: black;
-
     position: absolute;
     margin-top: -10px;
     width: $stripeStep + 10px;
@@ -217,8 +104,8 @@ body {
     pointer-events: none;
     background: repeating-linear-gradient(
                     90deg,
-                    $stripeColor,
-                    $stripeColor 2px,
+                    $stripeColorBlack,
+                    $stripeColorBlack 2px,
                     transparent 2px,
                     transparent (($stripeStep / 4) + 2px)
     );
@@ -226,15 +113,12 @@ body {
 
 .stripes-special {
     @extend .stripes-short;
-
-    $stripeStep: 1110px;
-    $stripeColor: white;
     margin-top: -125px;
     margin-bottom: -20px;
     background: repeating-linear-gradient(
                     90deg,
-                    $stripeColor 2px,
-                    $stripeColor 3px,
+                    $stripeColorWhite 2px,
+                    $stripeColorWhite 3px,
                     transparent 1px,
                     transparent (($stripeStep / 4) + 3px)
     );
@@ -245,7 +129,7 @@ body {
         z-index: 10;
         width: 2px;
         height: 100px;
-        background-color: #F6D330;
+        background-color: $colorYellow;
         text-align: center;
         margin: -75px auto 0 auto;
     }
@@ -260,6 +144,9 @@ body {
 
 .mrg{
     margin: 0px;
+    z-index: 2;
+    position: relative;
+    text-align: center;
 }
 
 .section-number {
@@ -279,7 +166,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-bottom: 10px;
+        margin-bottom: 35px;
 
         &__number {
             margin-right: 5px;
@@ -305,112 +192,176 @@ body {
         color: white;
         border-color: white;
     }
+    @media (max-width: 1476px){
+        display: none;
+    }
 }
 
-.navigation {
-    height: 975px;
-
-    .wrapper {
-        width: 1120px;
-        position: relative;
-        z-index: 2;
+.header {
+    &__wrapper {
+        height: 913px;
         margin: 35px auto 0px;
+        @media (max-width: 767px) {
+            height: 755px;
+        }
+        @media (max-width: 575px) {
+            height: 580px;
+        }
+    }
 
-        .menu {
-            margin-top: 15px;
+    &__logo{
+        margin-right: 80px;
+        @media (max-width: 575px) {
+           float: left;
+        }
+    }
 
-            a {
-                margin-right: 80px;
-                color: black;
-                text-decoration: none;
-                font-family: 'Sofia Pro Regular';
+    &__menu {
+        margin-left: 125px;
+        margin-top: 15px;
+    }
 
-                &:hover {
-                    border-bottom: 1px solid #f6d330;
-                    padding-bottom: 5px;
-                }
+    .menu {
+        &__item {
+            margin-right: 80px;
+            @media (max-width: 767px) {
+                margin-right: 0px;
+            }
+        }
 
-                &:last-child {
-                    margin-right: 0px;
-                }
+        .item {
+            color: black;
+            text-decoration: none;
+            font-family: 'Sofia Pro';
+            font-weight: 400;
+
+            &:hover {
+                border-bottom: 1px solid $colorYellow;
+                padding-bottom: 5px;
+            }
+
+            &:last-child {
+                margin-right: 0px;
             }
         }
     }
 
     .slider-activities {
         .carousel {
-            height: 1120px;
             top: -117px;
             right: 1px;
 
             .owl-stage-outer {
                 z-index: -1;
             }
+        }
 
-            .item {
-                .wrapper-information {
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)), url(../../assets/images/background-image.png) no-repeat center;
-                    background-size: cover;
-                    place-content: center;
-                    height: 975px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    color: white;
-                    align-content: center;
+        &__item {
+            &__container {
+                padding: 0px;
+                max-width: 100% !important;
+            }
 
-                    .text-wrapper {
-                        max-width: 1170px;
-                        text-align: center;
-                        padding: 0px 10px;
-
-                        .slider__title {
-                            font-size: 115px;
-                            margin-bottom: 41px;
-                        }
-
-                        .slider__subtitle {
-                            font-size: 25px;
-                            font-family: 'Sofia Pro Light';
-                            margin-bottom: 80px;
-                            letter-spacing: 0.5px;
-                        }
-                    }
-
-                    .slider__button {
-                        height: 48px;
-                        width: 196px;
-                        font-size: 14px;
-                        margin: 0 auto;
-
-                        .icon {
-                            background-image: url(../../assets/images/button-svg.svg);
-                        }
-                    }
+            .wrapper-information {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)),
+                url(../../assets/images/background-image.png) no-repeat center;
+                background-size: cover;
+                place-content: center;
+                height: 975px;
+                display: flex;
+                flex-wrap: wrap;
+                color: white;
+                align-content: center;
+                @media (max-width: 767px) {
+                    height: 800px;
                 }
+                @media (max-width: 575px) {
+                    height: 520px;
+                }
+
+                .text-wrapper {
+                    max-width: 1170px;
+                    text-align: center;
+                    padding: 0px 10px;
+
+                }
+            }
+
+            &__title {
+                font-size: 115px;
+                margin-bottom: 41px;
+                @media (max-width: 767px) {
+                    margin-top: 70px;
+                    font-size: 70px;
+                }
+                @media (max-width: 575px) {
+                    margin-bottom: 20px;
+                    font-size: 50px;
+                    margin-top: 105px;
+                }
+            }
+
+            &__subtitle {
+                font-size: 25px;
+                font-family: 'Sofia Pro';
+                font-weight: 300;
+                margin-bottom: 80px;
+                letter-spacing: 0.5px;
+                @media (max-width: 575px) {
+                    margin-bottom: 45px;
+                    font-size: 14px;
+                }
+            }
+
+            &__button {
+                height: 48px;
+                width: 196px;
+                font-size: 14px;
+                margin: 0 auto;
+            }
+
+            &__text {
+                margin-top: 177px;
+                margin-bottom: -306px;
+                font-family: "Sofia Pro";
+                font-weight: 300;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.7);
+
             }
         }
     }
 }
 
+
+
 .about-us {
-    margin-bottom: 140px;
-
-    .stripe {
-        background: #f6d330;
+    &__wrapper {
+        @include padding;
     }
 
-    img {
-        margin-bottom: 25px;
+    &__stripe {
+        background: $stripeColorYellow;
+        @media (max-width: 1200px) {
+            margin-bottom: 40px;
+            margin-top: 15px;
+        }
     }
 
-    .about-us__text {
+    &__img {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    &__text {
         margin-bottom: 30px;
-        font-family: 'Sofia Pro Light';
+        font-family: 'Sofia Pro';
+        font-weight: 300;
         font-size: 18px;
 
-        &:first-child {
-            margin-top: -8px;
-        }
+        //&:first-child {
+        //    margin-top: -8px;
+        //}
 
         &:last-child {
             margin: 0px;
@@ -419,116 +370,227 @@ body {
 }
 
 .services {
-    background: #f6d330;
-    font-family: 'Sofia Pro Light';
-
-    .services__title {
-        padding-top: 100px;
+    &__wrapper {
+        background: $colorYellow;
+        font-family: 'Sofia Pro';
+        font-weight: 300;
+        @include padding;
     }
 
-    .services__text {
+    &__text {
         margin-top: -40px;
         margin-bottom: 45px;
         letter-spacing: 0.5px;
+
+        &-bottom {
+            margin-bottom: 0px;
+            @media (max-width: 1200px) {
+                margin-top: 50px;
+            }
+            @media (max-width: 992px) {
+                margin-top: 25px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 20px;
+            }
+            @media (max-width: 575px) {
+                margin-bottom: 0px;
+            }
+        }
     }
 
-    .mg {
-        margin-bottom: 140px;
-    }
-
-    .stripe {
-        background: white;
+    &__stripe {
+        background: $stripeColorWhite;
+        margin-bottom: 100px;
+        @media (max-width: 1200px) {
+            margin-top: 10px;
+            margin-bottom: 45px;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: 32px;
+            margin-top: -10px;
+        }
+        @media (max-width: 575px) {
+            margin-bottom: 33px;
+        }
     }
 
     .col-title {
-        font-family: 'Sofia Pro Bold';
+        font-family: 'Sofia Pro';
+        font-weight: 600;
         max-width: 200px;
         font-size: 40px;
     }
 
-    .wrapper {
+    &__list {
         margin-bottom: 120px;
 
-        ul {
+        &__wrapper {
             margin: 0px;
             padding: 0px;
+        }
 
-            li {
-                margin-bottom: 5px;
-                margin-left: 22px;
+        &__item {
+            margin-bottom: 5px;
+            margin-left: 22px;
 
-                &::marker {
-                    color: white;
-                }
+            &::marker {
+                color: white;
             }
         }
 
-        .arrow {
+
+        &__arrow-img {
             margin-left: 15px;
             margin-top: 35px;
+        }
+
+        @media (max-width: 1200px) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: 40px;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
         }
     }
 }
 
 .contact {
-    background: black;
-    color: white;
-    font-family: 'Sofia Pro Bold';
-
-    .stripe {
-        background: #f6d330;
-    }
-
-    .contact__title {
+    &__wrapper {
+        background: black;
+        color: white;
+        font-family: 'Sofia Pro';
+        font-weight: 600;
         padding-top: 120px;
+        @media (max-width: 1200px) {
+            padding-top: 60px;
+        }
     }
 
-    .contact__text {
+    &__stripe {
+        background: $stripeColorYellow;
+        @media (max-width: 1200px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    &__text {
         font-size: 40px;
         word-break: break-word;
+        @media (max-width: 992px) {
+            margin-bottom: -90px;
+        }
+        @media (max-width: 575px) {
+            margin-bottom: 10px;
+            margin-top: 25px;
+            font-size: 25px;
+        }
+
+        span {
+            color: #f6d330;
+            padding-bottom: 5px;
+            border-bottom: 1px solid;
+        }
     }
 
-    span {
-        color: #f6d330;
-        padding-bottom: 5px;
-        border-bottom: 1px solid;
-    }
+    .contact-form {
+        &__wrapper {
+            margin-left: 100px;
+            @media (max-width: 767px) {
+                margin-left: 0px !important;
+            }
+        }
 
-    .form__title {
-        max-width: 300px;
-        font-size: 40px;
-        margin-top: 170px;
-    }
-
-    .form__button {
-        width: 272px;
-        height: 48px;
-        margin-bottom: 288px;
-        float: right;
-    }
-
-    .contact-form-wrapper {
-        margin-left: 100px;
-
-        .contact-form-success {
+        &__success {
             display: none;
         }
+
+        &__title {
+            max-width: 300px;
+            font-size: 40px;
+            margin-top: 170px;
+
+            @media (max-width: 575px) {
+                margin-top: 45px;
+                font-size: 25px;
+                max-width: 175px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .form {
+            &__button {
+                width: 272px;
+                height: 48px;
+                margin-bottom: 288px;
+                float: right;
+                @media (max-width: 1200px) {
+                    margin-bottom: 100px;
+                }
+                @media (max-width: 992px) {
+                    width: 100%;
+                    margin-bottom: 0px;
+                }
+                @media (max-width: 575px) {
+                    width: 196px;
+                    height: 48px;
+                    margin-bottom: 0px;
+                }
+            }
+
+            &__input {
+                width: 100%;
+                height: 45px;
+                margin-bottom: 14px;
+                padding: 0 15px;
+                font-family: 'Sofia Pro';
+                font-weight: 500;
+
+                &:focus-visible {
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: black;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .wrapper{
+        padding-top: 53px;
+        padding-bottom: 67px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
     }
 
-    input {
-        width: 100%;
-        height: 45px;
-        margin-bottom: 14px;
-        padding: 0 15px;
+    .text {
+        font-size: 14px;
+    }
+}
 
-        &:focus-visible {
-            outline: none;
-        }
-
-        &::placeholder {
-            font-family: 'Sofia Pro Semi Bold';
-            color: black;
-            text-transform: uppercase;
-        }
+@media (max-width: 575px) {
+    .about-us__title {
+        margin-top: -125px;
     }
 }

@@ -97,10 +97,6 @@ const config = {
       new CopyPlugin({
          patterns: [
             {
-               from: "./assets/fonts",
-               to: "./fonts",
-            },
-            {
                from: "./assets/images",
                to: "./img",
             },
