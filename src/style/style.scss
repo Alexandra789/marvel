@@ -341,11 +341,14 @@ body {
     }
 
     &__stripe {
-        background: $stripeColorYellow;
-        @media (max-width: 1200px) {
-            margin-bottom: 40px;
-            margin-top: 15px;
-        }
+      background: $stripeColorYellow;
+      margin-top: -10px;
+      margin-bottom: 10px;
+
+      @media (max-width: 1200px) {
+        margin-bottom: 40px;
+        margin-top: 15px;
+      }
     }
 
     &__img {
@@ -397,7 +400,8 @@ body {
 
     &__stripe {
         background: $stripeColorWhite;
-        margin-bottom: 100px;
+        margin-top: 5px;
+        margin-bottom: 60px;
         @media (max-width: 1200px) {
             margin-top: 10px;
             margin-bottom: 45px;
@@ -467,6 +471,8 @@ body {
 
     &__stripe {
         background: $stripeColorYellow;
+        margin-top: 0px;
+        margin-bottom: 5px;
         @media (max-width: 1200px) {
             margin-top: 20px;
             margin-bottom: 20px;
