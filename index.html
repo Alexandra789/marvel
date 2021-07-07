@@ -14,19 +14,16 @@
 
 <body>
     <div class="stripes d-xl-block d-none"></div>
+
     <header class="header">
         <div class="header__wrapper">
-            <div class="row mrg">
-                <div class="col-xl-5 col-md-4 col-sm-4">
+                <div class="d-flex mrg">
                     <img class="logo header__logo" src="./assets/images/logo.svg" alt="logo">
-                </div>
-                <div class="col-xl-7 col-md-8 col-sm-8">
                     <nav class="menu header__menu d-none d-lg-block d-md-block">
                         <a class="item menu__item" href="#about">About</a>
                         <a class="item menu__item" href="#services">Services</a>
                         <a class="item menu__item" href="#contact">Contact</a>
                     </nav>
-                </div>
                 <div class="hamburger-menu d-block d-lg-none d-md-none">
                         <input id="menu__toggle" type="checkbox" />
                         <label class="menu__btn" for="menu__toggle">
@@ -53,7 +50,7 @@
                     <div class="container slider-activities__item__container">
                         <div class="wrapper-information">
                             <div class="text-wrapper">
-                                    <p class="title slider-activities__item__title">Marvel Power Group</p>
+                                    <h1 class="title slider-activities__item__title">Marvel Power Group</h1>
                                     <p class="text slider-activities__item__subtitle">Marvel Power Group is a boutique
                                         consulting firm with a fresh, markets-based approach to value
                                         creation. We offer services to clients in energy, water, manufacturing
@@ -95,8 +92,8 @@
     <section class="about-us" id="about">
     <div class="about-us__wrapper wrapper">
         <div class="container about-us__container">
-            <p class="title about-us__title">About Us</p>
-            <div class="stripe about-us__stripe"></div>
+            <h2 class="title about-us__title title-yellow">About Us</h2>
+<!--            <div class="stripe about-us__stripe"></div>-->
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6">
                     <img class="img about-us__img"src="./assets/images/about-us-section.png" alt="img">
@@ -145,8 +142,8 @@
     <section class="services" id="services">
     <div class="services__wrapper wrapper">
         <div class="container services__container">
-                    <p class="title services__title">Services</p>
-                    <div class="stripe services__stripe"></div>
+                    <h2 class="title services__title title-white">Services</h2>
+<!--                    <div class="stripe services__stripe"></div>-->
             <div class="row">
                 <div class="col-xl-10 col-md-10">
                     <p class="text services__text">
@@ -238,8 +235,8 @@
         <div class="container contact__container">
             <div class="row ml-0">
                 <div class="col-xl-7 col-md-6 pd">
-                    <p class="title contact__title">Contact</p>
-                    <div class="stripe contact__stripe"></div>
+                    <h2 class="title contact__title title-yellow">Contact</h2>
+<!--                    <div class="stripe contact__stripe"></div>-->
                     <p class="contact__text">Email us here: <span>info@marvelpowergroup.com</span></p>
                 </div>
                 <div class="col-xl-5 col-md-6 pd">
@@ -264,7 +261,7 @@
                             <p class="contact-form__title">
                                 Thank you. Your info has been successfully sent.
                             </p>
-                            <p>You can contact us <span>info@marvelpowergroup.com</span> if you need additional
+                            <p class="contact__text">You can contact us <span>info@marvelpowergroup.com</span> if you need additional
                                 assistance</p>
                         </div>
                     </div>

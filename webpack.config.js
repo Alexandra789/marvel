@@ -28,7 +28,7 @@ const base = [
 ]
 
 const config = {
-   entry: ["./src/app/index.js", "./src/style/style.scss"],
+   entry: "./src/app/index.js",
    output: {
       path: path.resolve(__dirname, "dist"),
       filename: "./js/bundle.js",

@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   right: 35px;
-  top: -8px;
+  top: -15px;
 
   #menu__toggle {
     opacity: 0;
@@ -119,7 +119,8 @@
       margin-bottom: 40px;
       color: #333;
       font-size: 40px;
-      font-weight: 600;
+      font-family: 'Sofia Pro';
+      font-weight: 400;
       text-decoration: none;
       text-align: center;
       transition-duration: 0.25s;

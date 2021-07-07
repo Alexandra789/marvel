@@ -1,3 +1,5 @@
+
+
 $('.carousel').owlCarousel({
   loop:true,
   margin:10,
@@ -12,6 +14,6 @@ $('.carousel').owlCarousel({
 
 $('#contactForm').submit(e => {
     e.preventDefault();
-    $('.contact-form-init').hide();
-    $('.contact-form-success').show();
+    $('.contact-form__init').hide();
+    $('.contact-form__success').show();
 });
