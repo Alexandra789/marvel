@@ -82,11 +82,6 @@ const config = {
                },
             ],
          },
-         // {
-         //    test: /\.html$/,
-         //    include: path.resolve(__dirname, "./src/public"),
-         //    use: ["raw-loader"],
-         // },
       ],
    },
    plugins: [
