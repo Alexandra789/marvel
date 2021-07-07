@@ -349,6 +349,10 @@ body {
         margin-bottom: 40px;
         margin-top: 15px;
       }
+      @media (max-width: 575px) {
+        margin-bottom: -5px;
+        margin-top: -17px;
+      }
     }
 
     &__img {
