@@ -509,6 +509,10 @@ body {
     }
 
     .contact-form {
+      margin-top: -105px;
+      @media (max-width: 767px) {
+        margin-top: -20px;
+      }
         &__wrapper {
             margin-left: 100px;
             @media (max-width: 767px) {
