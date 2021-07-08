@@ -45,6 +45,9 @@ html,body{
     height: 0;
     justify-content: space-evenly;
     position: relative;
+    &__header{
+      top: 30%;
+    }
     &-black{
       top: -4%;
     }
@@ -146,10 +149,11 @@ h2 {
     margin: 0px;
     z-index: 2;
     position: relative;
-    justify-content: space-around;
     @media (max-width: 992px) {
-      justify-content: space-between;
       padding: 0 35px;
+    }
+    @media (max-width: 575px) {
+      padding: 0;
     }
   }
 
@@ -204,6 +208,7 @@ h2 {
   }
 
   .header {
+    position: relative;
     &__wrapper {
       height: 913px;
       margin: 20px auto 0px;
@@ -332,8 +337,9 @@ h2 {
         }
 
         &__text {
-          margin-top: 177px;
-          margin-bottom: -306px;
+          bottom: 5%;
+          position: absolute;
+          right: 47%;
           font-family: "Sofia Pro";
           font-weight: 300;
           font-size: 14px;
