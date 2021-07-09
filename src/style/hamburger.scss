@@ -2,43 +2,6 @@
   display: none;
   position: absolute;
   right: 35px;
-  top: -15px;
-
-  #menu__toggle {
-    opacity: 0;
-
-    &:checked {
-      position: fixed;
-
-      & ~ .menu__btn {
-        position: fixed;
-        top: 30px;
-        right: 35px;
-      }
-
-      & ~ .menu__btn > span {
-        transform: rotate(45deg);
-        background-color: white;
-
-        &::before {
-          top: 0;
-          transform: rotate(0);
-          background-color: white;
-        }
-
-        &::after {
-          top: 0;
-          transform: rotate(90deg);
-          background-color: white;
-        }
-      }
-
-      & ~ .menu__box {
-        visibility: visible;
-        left: 0;
-      }
-    }
-  }
 
   .menu__btn {
     display: flex;
@@ -74,6 +37,26 @@
       content: '';
       top: 8px;
     }
+    &.active{
+      position: fixed;
+      top: 40px;
+      right: 20px;
+      span{
+              top: 0;
+              transform: rotate(45deg);
+              background-color: white;
+
+        &:before{
+          background-color: white;
+                top: 0;
+                transform: rotate(0);
+        }
+        &:after{
+          top: 0;
+          background-color: white;
+          transform: rotate(90deg);}
+      }
+    }
   }
 
 
@@ -82,7 +65,6 @@
     position: fixed;
     visibility: hidden;
     top: 0;
-    left: -100%;
     z-index: 2;
 
     width: 100%;
@@ -92,6 +74,17 @@
 
     background-color: white;
     transition-duration: .2s;
+
+    left: -100%;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition:  0.3s;
+
+    &.active{
+      padding: 0px;
+      left: 0px;
+      visibility: visible;
+    }
 
     ul {
       padding: 0;
@@ -123,7 +116,6 @@
       font-weight: 400;
       text-decoration: none;
       text-align: center;
-      transition-duration: 0.25s;
 
       &:last-child {
         margin-bottom: 100px;

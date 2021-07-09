@@ -14,6 +14,10 @@ $colorYellow: #f6d330;
     }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .pd{
     z-index: 1;
     padding-left: 0px;
@@ -102,7 +106,7 @@ img.bg-img{
 }
 
 .container {
-    max-width: 1040px;
+    max-width: 1110px;
 }
 
 body {
@@ -139,8 +143,15 @@ h2 {
     &-yellow::after{
       background-color: $stripeColorYellow;
     }
+    @media (max-width: 992px) {
+      padding-bottom: 20px;
+      &:not(.about-us__title){padding-top: 60px;}
 
-    @media (max-width: 767px) {
+    }
+    //@media (max-width: 767px) {
+    //  font-size: 40px;
+    //}
+    @media (max-width: 575px) {
       font-size: 40px;
     }
   }
@@ -220,6 +231,13 @@ h2 {
       }
       @media (max-width: 575px) {
         height: 485px;
+      }
+    }
+
+    .logo img{
+      @media (max-width: 575px) {
+        width: 100px;
+        height: 40px;
       }
     }
 
@@ -413,7 +431,11 @@ h2 {
       font-weight: 600;
       max-width: 200px;
       font-size: 40px;
+      @media (max-width: 575px) {
+        font-size: 25px;
+      }
     }
+
 
     &__list {
       margin-bottom: 120px;
@@ -579,7 +601,7 @@ h2 {
       max-width: 750px;
     }
     .wrapper {
-      padding-top: 53px;
+      padding-top: 0px;
       padding-bottom: 67px;
     }
   }
@@ -599,3 +621,137 @@ h2 {
       margin-top: -125px;
     }
   }
+
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 9999;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+
+    .nav {
+      display: flex;
+      align-items: center;
+
+      .nav-item {
+        display: block;
+        margin-left: 66px;
+        font-family: 'Sofia Pro';
+        font-weight: 400;
+        a{
+          text-decoration: none;
+          color: black;
+          padding-bottom: 5px;
+          &:hover{
+            border-bottom: 1px solid $colorYellow;
+          }
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  position: relative;
+  margin-bottom: 93px;
+  @media (max-width: 575px) {
+    font-size: 65px;
+  }
+
+  .slide {
+    background-size: cover !important;
+    padding: 350px 0 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)),
+    url(../../assets/images/background-image.png) no-repeat center;
+    @media (max-width: 1200px){
+      padding: 200px 0 50px;
+    }
+
+    .slider-activities__item__title {
+      font-size: 115px;
+      line-height: 130px;
+      text-align: center;
+      color: #fff;
+      font-family: Alata;
+      font-weight: normal;
+      margin: 0 auto 41px;
+
+      @media (max-width: 767px) {
+        font-size: 70px;
+        line-height: 60px;
+      }
+      @media (max-width: 575px) {
+        font-size: 50px;
+      }
+    }
+
+    .slider-activities__item__subtitle {
+      font-family: "Sofia Pro";
+      font-size: 25px;
+      line-height: 35px;
+      color: #fff;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 79px;
+      @media (max-width: 575px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .link-wrapper {
+      width: 100%;
+
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 196px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: "Sofia Pro";
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #000;
+        margin: 0 auto;
+        letter-spacing: 0.6px;
+        background: #F9D023;
+
+        img {
+          margin: 0 0 0 6px;
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .slider-activities__item__text  {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+    font-family: "Sofia Pro";
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -22,92 +22,56 @@
         <div class="line"></div>
     </div>
 
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="">
+        </div>
+        <ul class="nav d-none d-lg-flex d-md-flex">
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#service">Services</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger-menu d-block d-lg-none d-md-none">
+<!--            <input id="menu__toggle" type="checkbox" />-->
+            <label class="menu__btn">
+                <span></span>
+            </label>
+            <div class="menu__box">
+                <div class="menu-top">
+                    <img src="./assets/images/logo.svg" alt="logo">
+                </div>
+                <ul class="nav d-block d-lg-none d-md-none">
+                    <li class="nav__item"><a href="#about">About</a></li>
+                    <li class="nav__item"><a href="#service">Services</a></li>
+                    <li class="nav__item"><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="text-center">
+                    <button class="button slider__button">Contact us <img class="bg-img" src="./assets/images/button-svg.svg"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                    <div class="d-flex mrg justify-content-between">
-                        <img class="logo header__logo" src="./assets/images/logo.svg" alt="logo">
-                        <nav class="menu header__menu d-none d-lg-block d-md-block">
-                            <a class="item menu__item" href="#about">About</a>
-                            <a class="item menu__item" href="#services">Services</a>
-                            <a class="item menu__item" href="#contact">Contact</a>
-                        </nav>
-                    <div class="hamburger-menu d-block d-lg-none d-md-none">
-                        <input id="menu__toggle" type="checkbox" />
-                        <label class="menu__btn" for="menu__toggle">
-                                <span></span>
-                        </label>
-                        <div class="menu__box">
-                                <div class="menu-top">
-                                    <img src="./assets/images/logo.svg" alt="logo">
-                                </div>
-                                <ul>
-                                    <li><a class="menu__item" href="#about">About</a></li>
-                                    <li><a class="menu__item" href="#services">Services</a></li>
-                                    <li><a class="menu__item" href="#contact">Contact</a></li>
-                                </ul>
-                                <div class="text-center">
-                                    <button class="button slider__button">Contact us <img class="bg-img" src="./assets/images/button-svg.svg"></button>
-                                </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="slider-activities">
-                        <div id="carouselWithOneItem" class="carousel owl-carousel owl-theme">
-                            <div class="slider-activities__item">
-                                <div class="container slider-activities__item__container">
-                                    <div class="wrapper-information">
-                                        <div class="text-wrapper">
-                                                <h1 class="title slider-activities__item__title">Marvel Power Group</h1>
-                                                <p class="text slider-activities__item__subtitle">Marvel Power Group is a boutique
-                                                    consulting firm with a fresh, markets-based approach to value
-                                                    creation. We offer services to clients in energy, water, manufacturing
-                                                    and transportation sectors.
-                                                </p>
-                                            <button class="button slider-activities__item__button last">Contact us
-                                                <img class="bg-img" src="./assets/images/button-svg.svg">
-                                            </button>
-
-                                            <div class="lines-wrapper lines-wrapper-short lines-wrapper-short__header">
-                                                <div class="line line-short"></div>
-                                                <div class="line line-short"></div>
-                                                <div class="line line-long"></div>
-                                                <div class="line line-short"></div>
-                                                <div class="line line-short"></div>
-                                            </div>
-
-                                            <a class="slider-activities__item__text d-xl-block d-none" href="#about">Scroll for more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="section-number home dark">
-                    <div class="section-number__entry">
-                        <div class="section-number__entry__number">01</div>
-                        <div class="section-number__entry__title">Home</div>
-                        <div class="section-number__entry__line long"></div>
-                    </div>
-                    <div class="section-number__entry">
-                        <div class="section-number__entry__number">02</div>
-                        <div class="section-number__entry__line"></div>
-                    </div>
-                    <div class="section-number__entry">
-                        <div class="section-number__entry__number">03</div>
-                        <div class="section-number__entry__line"></div>
-                    </div>
-                    <div class="section-number__entry">
-                        <div class="section-number__entry__number">04</div>
-                        <div class="section-number__entry__line"></div>
+<section class="main">
+    <div id="carouselWithOneItem" class="carousel owl-carousel owl-theme">
+        <div class="slide">
+            <div class="container">
+                <div class="">
+                    <h1 class="slider-activities__item__title">Marvel Power Group </h1>
+                    <p class="text slider-activities__item__subtitle">
+                        Marvel Power Group is a boutique consulting firm with a fresh, markets-based approach to value creation. We offer services to clients in energy, water, manufacturing and transportation sectors.
+                    </p>
+                    <div class="link-wrapper">
+                        <a href="#" class="link">Contact us <img class="bg-img" src="./assets/images/button-svg.svg"></a>
                     </div>
                 </div>
-                </div>
-
-
-    </header>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="slider-activities__item__text d-xl-block d-none">Scroll for more</a>
+</section>
 
     <section class="about-us" id="about">
     <div class="about-us__wrapper wrapper">
@@ -166,7 +130,7 @@
         <div class="line line-short line-short-black"></div>
     </div>
 
-    <section class="services" id="services">
+    <section class="services" id="service">
     <div class="services__wrapper wrapper">
         <div class="container services__container">
             <h2 class="title services__title title-white">Services</h2>
@@ -333,7 +297,7 @@
 
     <script src="./src/app/jquery.min.js"></script>
     <script src="./src/app/owl.carousel.min.js"></script>
-    <script src="./src/app/index.js"></script>
+<!--    <script src="./dist/js/bundle.js"></script>-->
 
 </body>
 
