@@ -50,10 +50,10 @@ html,body{
     justify-content: space-evenly;
     position: relative;
     &__header{
-      top: 30%;
+      top: -125px;
     }
     &-black{
-      top: -4%;
+      top: -2%;
     }
   }
 
@@ -148,12 +148,12 @@ h2 {
       &:not(.about-us__title){padding-top: 60px;}
 
     }
-    //@media (max-width: 767px) {
-    //  font-size: 40px;
-    //}
-    @media (max-width: 575px) {
+    @media (max-width: 767px) {
       font-size: 40px;
     }
+    //@media (max-width: 575px) {
+    //  font-size: 40px;
+    //}
   }
 
   .mrg {
@@ -669,7 +669,7 @@ h2 {
 
   .slide {
     background-size: cover !important;
-    padding: 350px 0 300px;
+    padding: 285px 0 300px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1)),
     url(../../assets/images/background-image.png) no-repeat center;
     @media (max-width: 1200px){
